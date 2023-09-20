@@ -1,0 +1,46 @@
+/* DropdownButton.css */
+.dropdown-button-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .register-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .dropdown-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  .dropdown-options {
+    position: absolute;
+    top: 100%;
+    padding: 2rem;
+    background-color:black;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    display:grid;
+  }
+  
+  .dropdown-option {
+    padding: 10px;
+    cursor: pointer;
+    color:white;
+    list-style: none;
+  }
+  
+  .dropdown-option:hover {
+    background-color: orange;
+  }
+  
