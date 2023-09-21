@@ -10,11 +10,11 @@ const hospitalDetail=mongoose.Schema({
         type:String,
         default:""
     },
-    hospitalId:{
+    HospitalId:{
         type:Schema.Types.ObjectId,
         ref:'Hospital', //refernce fromhospitalschema model
     },
-    hospitalAddress:{
+    HospitalAddress:{
         type:String,
         default:"",
     },
