@@ -4,7 +4,7 @@ const Details = require('../models/hospitalDetails');
 
 const saveHospitalDetails=expressAsyncHandler(async(req,res)=>{
 
-    const {HospitalName,HospitalAddress,hepline,placeId,HospitalId}=req.body;
+    const {HospitalName,HospitalAddress,helpline,placeId,HospitalId}=req.body;
      let body={};
      const hospital=await Hospital.findOne({
         _id:HospitalId,
