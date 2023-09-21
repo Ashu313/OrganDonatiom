@@ -17,7 +17,7 @@ const HospitalSchema=mongoose.Schema({
         type:String,
     },
     hospitalDetail:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Details', //reference from hospital details,
     },
     otp:{

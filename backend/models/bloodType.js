@@ -7,7 +7,7 @@ const BloodSchema=mongoose.Schema({
         required:[true,'blood type is required']
     }],
     hospitalId:{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Hospital",
     },
     isdeleted:{

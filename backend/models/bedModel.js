@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 
 const BedSchema=mongoose.Schema({
     typeId:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"BedTypes"
       },
       vacancy:{
@@ -10,7 +10,7 @@ const BedSchema=mongoose.Schema({
         default:"zero"
       },
       hospitalId:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"Hospital",
       },
       isDeleted: {
@@ -22,5 +22,5 @@ const BedSchema=mongoose.Schema({
       timestamps: true,
     }
 )
-const BedModel=mongoose.model('BedMode',BedSchema);
+const BedModel=mongoose.model('BedModel',BedSchema);
 export default BedModel;

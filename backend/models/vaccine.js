@@ -6,7 +6,7 @@ const vaccineSchema=mongoose.Schema({
         available:Boolean
     }],
     hospitalId:{
-     type: Schema.Types.ObjectId,
+     type: mongoose.Schema.Types.ObjectId,
       ref: "Hospital",
     },
     isdeleted:{
@@ -17,5 +17,5 @@ const vaccineSchema=mongoose.Schema({
 {
     timstamps:true,
 })
-const vaccine=mongoose.model(vaccineSchema);
+const vaccine=mongoose.model('vaccine',vaccineSchema);
 module.exports=vaccine;

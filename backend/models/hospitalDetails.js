@@ -11,7 +11,7 @@ const hospitalDetail=mongoose.Schema({
         default:""
     },
     HospitalId:{
-        type:Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Hospital', //refernce fromhospitalschema model
     },
     HospitalAddress:{
@@ -50,7 +50,7 @@ const hospitalDetail=mongoose.Schema({
     vaccine:[{
         type:String,
     }],
-    ambulanceAvialbility:{
+    ambulanceAvailbility:{
         type:Boolean,
         default:'false',
     },

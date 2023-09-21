@@ -22,7 +22,7 @@ const saveHospitalDetails=expressAsyncHandler(async(req,res)=>{
      const hospitaldetail=await Details.create({
 HospitalName,
 HospitalAddress,
-hepline,
+helpline,
 placeId,
 HospitalId
      })
@@ -39,5 +39,34 @@ HospitalId
 
 })
 
-module.exports=saveHospitalDetails;
+const updateHospitalDetails=expressAsyncHandler(async(req,res)=>{
+
+    const {HospitalName,HospitalNumber,HospitalId,HospitalAddress,beds,availableOperations,placeId,emergencyAvailability,oxygen,blood,ambulanceAvailbility,helpline}=req.body;
+    try{
+        const {id}=req?.params
+    const hospital=await findByIdAndUpdate(id,{
+        HospitalName,
+        HospitalNumber,
+        HospitalId,
+        HospitalAddress,
+        beds,
+        availableOperations,
+        placeId,
+        emergencyAvailability,
+        oxygen,blood,
+        ambulanceAvailbility,
+        helpline
+    },
+    {
+        new:true,
+    }
+    )
+    res.json(hospital);
+}catch(err)
+{
+    res.json(err);
+}
+})
+
+module.exports={saveHospitalDetails,updateHospitalDetails};
 
